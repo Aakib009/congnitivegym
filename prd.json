@@ -1,0 +1,203 @@
+{
+  "project": "Cognitive Gym",
+  "branchName": "ralph/ui-refresh",
+  "description": "UI Refresh (all screens) - Apply the unslop design direction (graphite surfaces, one lime accent, sentence case, 4px grid, weights 400-600) across every remaining screen, web-first. Theme foundation, GymCard, and home screen are already converted and serve as the reference pattern.",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Extend the cleaned theme tokens",
+      "description": "As a developer, I need the theme layer finished so all screens inherit correct defaults without per-screen overrides.",
+      "acceptanceCriteria": [
+        "app_theme.dart text theme uses only weights 400/500/600, no letter spacing above 0.2",
+        "ElevatedButton, OutlinedButton, TextButton and FilledButton themes all share radius 8 and no stadium shapes by default",
+        "Dialog and BottomSheet themes defined: radius 16, hairline border, correct surface colors for dark and light",
+        "flutter analyze passes"
+      ],
+      "priority": 1,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-002",
+      "title": "Restyle app drawer and navigation shell",
+      "description": "As a user, I want navigation that is the quietest part of the app.",
+      "acceptanceCriteria": [
+        "Drawer rows 36-40 tall with 4px gaps, icons in one column, sentence case labels",
+        "Bottom nav uses theme NavigationBar with sentence case labels",
+        "No badge pills except a small count dot where meaningful",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 2,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "Restyle auth screens (login, sign up)",
+      "description": "As a new user, I want a clean login and sign-up flow so the first impression is trustworthy.",
+      "acceptanceCriteria": [
+        "Headline sentence case, states what the app is, no exclamation marks",
+        "Inputs use theme input decoration; buttons use theme button style (radius 8)",
+        "No gradient text, glows, or decorative blobs behind forms",
+        "Keyboard focus states visible on all fields and buttons",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill (dark and light theme)"
+      ],
+      "priority": 3,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-004",
+      "title": "Restyle journal screen",
+      "description": "As a user, I want a readable journal list so I can review my past entries.",
+      "acceptanceCriteria": [
+        "Entry rows share one height and gap; dates in one tabular column",
+        "Sentence case headings; no emoji in toolbar or empty states",
+        "Empty state uses a plain line icon and one short sentence",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 4,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-005",
+      "title": "Restyle analytics screen and charts",
+      "description": "As a user, I want charts that follow one visual hierarchy so I can read my progress at a glance.",
+      "acceptanceCriteria": [
+        "One main chart clearly the largest; secondary data smaller and different in kind",
+        "One accent color per chart highlighting the current period; rest neutral",
+        "Muted grid lines and sentence-case axis labels; no rainbow series",
+        "Stat blocks are label + figure + change with comparison, no sparkline decoration",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 5,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-006",
+      "title": "Restyle mind tree screen and widget",
+      "description": "As a user, I want the mind tree visual to keep its nature identity while its controls match the app.",
+      "acceptanceCriteria": [
+        "Tree painter palette (pine/moss/sage) kept as the screen's one rich moment",
+        "Surrounding chrome uses graphite surfaces and lime accent only",
+        "Legend and progress rows aligned; sentence case labels",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 6,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-007",
+      "title": "Restyle debate arena and loading screens",
+      "description": "As a user, I want topic selection and loading to be calm so I can focus on argument.",
+      "acceptanceCriteria": [
+        "Arena topic cards: quiet surfaces, category color only on tag text",
+        "Loading screen has no looping decorative animation",
+        "Cards share one height, padding and radius; sentence case copy",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 7,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-008",
+      "title": "Restyle debate chat screen",
+      "description": "As a user, I want debate chat readable so I can follow the argument.",
+      "acceptanceCriteria": [
+        "User and AI message bubbles differ by surface step, not by colored glow",
+        "Input bar uses theme input decoration and radius 8 controls",
+        "Message list rows aligned; timestamps muted and consistent",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 8,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-009",
+      "title": "Restyle story builder screen",
+      "description": "As a user, I want the word constraints and editor to be clear so I can write without distraction.",
+      "acceptanceCriteria": [
+        "Keyword chips quiet: mono figures, muted text, radius 6",
+        "Editor text at body size, sentence case prompts, no italic emphasis",
+        "Timer/countdown as quiet tabular text, not a glowing pill",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 9,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-010",
+      "title": "Restyle observation challenge screen",
+      "description": "As a user, I want the challenge to focus on the imagery with quiet chrome around it.",
+      "acceptanceCriteria": [
+        "Image area is the visual moment; controls and scores quiet",
+        "Answer feedback uses semantic colors toned to the palette",
+        "Progress and timer aligned on the 4px grid",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 10,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-011",
+      "title": "Restyle scenario lab screen",
+      "description": "As a user, I want branching dilemmas presented as clear choice cards.",
+      "acceptanceCriteria": [
+        "Choice cards equal height, equal padding, hairline borders",
+        "Selected state is a surface step plus hairline highlight, no glow",
+        "Outcome text sentence case, no trailing periods on short strings",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 11,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-012",
+      "title": "Restyle adaptive training, account and about screens",
+      "description": "As a user, I want settings and secondary screens to feel like the same product.",
+      "acceptanceCriteria": [
+        "List rows one height, icons in one column, labels sentence case",
+        "Achievement cards: no emoji icons; status via quiet text or dot",
+        "About screen content reflowed with correct text roles",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 12,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-013",
+      "title": "Restyle level-up dialog, rank arena card and celebration widgets",
+      "description": "As a user, I want reward moments to feel earned and crafted, not loud.",
+      "acceptanceCriteria": [
+        "Rank colors retained for tiers but used flat, no gradients",
+        "Confetti colors limited to palette tokens",
+        "Dialog radius 16, hairline border, sentence case copy",
+        "flutter analyze passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 13,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}

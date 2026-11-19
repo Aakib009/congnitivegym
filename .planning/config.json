@@ -1,0 +1,12 @@
+{
+  "project": "cognitive_gym",
+  "version": "1.0.0+1",
+  "framework": "flutter",
+  "language": "dart",
+  "mode": "brownfield",
+  "currentPhase": "phase-8-hardening",
+  "initializedAt": "2026-10-23T13:00:00+05:30",
+  "planningDirectory": ".planning",
+  "testCommand": "flutter test",
+  "analyzeCommand": "flutter analyze"
+}
